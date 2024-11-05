@@ -1,7 +1,10 @@
+/* display computer size is going to be '1920 x 1088' */
+
+
 /* Eyes container and eyes */
 .eyes {
     position: absolute;
-    top: 20.8%; /* Center the eyes vertically */
+    top: 22.8%; /* Center the eyes vertically */
     left: 48.2%; /* Center the eyes horizontally */
     transform: translate(-50%, -50%); /* Fully center in both directions */
     z-index: 1; /* The eyes are behind the overlay */
@@ -11,11 +14,11 @@
 }
 
 .eye {
-    width: 30px;
+    width: 35px;
     height: 25px;
     background: #CB7B24;
     display: inline-block;
-    margin: 17px;
+    margin: 19px;
     border-radius: 50%;
     position: relative;
     overflow: hidden;
