@@ -1,0 +1,60 @@
+/* Eyes container and eyes */
+.eyes {
+    position: absolute;
+    top: 20.8%; /* Center the eyes vertically */
+    left: 48.2%; /* Center the eyes horizontally */
+    transform: translate(-50%, -50%); /* Fully center in both directions */
+    z-index: 1; /* The eyes are behind the overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.eye {
+    width: 30px;
+    height: 25px;
+    background: #CB7B24;
+    display: inline-block;
+    margin: 17px;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+}
+
+.ball {
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.ball-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image scales properly */
+    border-radius: 50%; /* Makes sure the ball stays circular */
+}
+
+/* Overlay image */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2; /* The overlay image is in front */
+    overflow: hidden;
+}
+
+.overlay-img {
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    object-fit: cover; /* Ensures the image covers the entire viewport */
+}
+
+.complete_monalisa {
+    display: flex;
+    flex-wrap: wrap;
+}
