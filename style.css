@@ -1,12 +1,9 @@
-/* display computer size is going to be '1920 x 1088' */
-
-
 /* Eyes container and eyes */
 .eyes {
     position: absolute;
-    top: 22.8%; /* Center the eyes vertically */
-    left: 48.2%; /* Center the eyes horizontally */
-    transform: translate(-50%, -50%); /* Fully center in both directions */
+    top: 22.8%; /* Default vertical centering */
+    left: 48.2%; /* Default horizontal centering */
+    transform: translate(-50%, -50%); /* Center in both directions */
     z-index: 1; /* The eyes are behind the overlay */
     display: flex;
     justify-content: center;
@@ -18,7 +15,7 @@
     height: 25px;
     background: #CB7B24;
     display: inline-block;
-    margin: 19px;
+    margin: 19px; /* Default margin */
     border-radius: 50%;
     position: relative;
     overflow: hidden;
@@ -36,28 +33,44 @@
 .ball-img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensures the image scales properly */
-    border-radius: 50%; /* Makes sure the ball stays circular */
+    object-fit: cover;
+    border-radius: 50%;
 }
 
-/* Overlay image */
 .overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 2; /* The overlay image is in front */
+    z-index: 2;
     overflow: hidden;
 }
 
 .overlay-img {
-    width: 100vw; /* Full viewport width */
-    height: 100vh; /* Full viewport height */
-    object-fit: cover; /* Ensures the image covers the entire viewport */
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
 }
 
 .complete_monalisa {
     display: flex;
     flex-wrap: wrap;
+}
+
+/* Adjust .eyes and .eye styles for 1920 x 1006 resolution */
+@media screen and (width: 1920px) and (height: 1006px) {
+    .eyes {
+        top: 20.8%;
+    }
+}
+
+/* Adjust .eyes and .eye styles for 1710 x 898 resolution */
+@media screen and (width: 1710px) and (height: 898px) {
+    .eyes {
+        top: 20.8%;
+    }
+    .eye {
+        margin: 16px;
+    }
 }
