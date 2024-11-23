@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            width: 100vw; /* Full width of the viewport */
+            height: 100vh; /* Full height of the viewport */
+            background-color: black; /* Initial black background */
+            display: flex;
+            justify-content: center; /* Center content horizontally */
+            align-items: center; /* Center content vertically */
+            overflow: hidden;
+            transition: background-color 3s ease; /* Smooth transition for background color */
+        }
+
+        img {
+            display: none; /* Initially hide the image */
+            width: 40px; /* Small image size */
+            height: auto;
+            opacity: 0; /* Start fully transparent */
+            transition: opacity 2s ease, transform 1s ease; /* Smooth fade-in and size change */
+            position: relative; /* Position the image relative to its container */
+            top: -200px; /* Move the image higher on the page */
+            cursor: pointer; /* Indicate the image is clickable */
+        }
+
+        .visible {
+            display: block; /* Show the image */
+            opacity: 1; /* Fully visible */
+        }
+
+        .enlarged {
+            transform: scale(8); /* Increase the size of the image */
+        }
+    </style>
+</head>
+<body>
+    <!-- Small image in the middle of the screen -->
+    <img src="/assets/mona_noface.jpg" alt="Mona Lisa No Face" id="hiddenImage">
+
+    <script>
+        // Show image and change background color after 2 seconds
+        setTimeout(() => {
+            document.body.style.backgroundColor = "white";
+
+            // Show and fade in the image
+            const image = document.getElementById("hiddenImage");
+            image.classList.add("visible");
+        }, 2000);
+
+        // Add click event to enlarge the image
+        document.addEventListener('click', () => {
+            const image = document.getElementById("hiddenImage");
+            if (image.classList.contains("visible") && !image.classList.contains("enlarged")) {
+                image.classList.add("enlarged");
+
+                // Open the popup 4 seconds after the image enlarges
+                setTimeout(() => {window.open(`who.html`, `who`,`width=444,height=74,left=650,top=850`)}, 4000); // 4000 milliseconds = 4 seconds
+            }
+        });
+    </script>
+</body>
+</html>

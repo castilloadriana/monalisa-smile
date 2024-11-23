@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+         body {
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Image styling */
+        #layer1 {
+            width: 100vw; /* Full width of the viewport */
+            height: 100vh; /* Full height of the viewport */
+            object-fit: contain; /* Ensures the whole image is visible without distortion */
+        }
+    </style>
+</head>
+<body>
+    <img 
+        src="/assets/fading/9.png" 
+        alt="monalisa layers" 
+        id="layer1" 
+        onclick="openMorePopups()"
+    >
+
+    <script>
+        function openMorePopups() {
+            window.open(
+                `10th.html`, 
+                `10th`, 
+                `width=335,height=323,left=698, top=126`
+            );
+        }
+    </script>
+</body>
+</html>

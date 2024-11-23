@@ -8,12 +8,12 @@
     <div class="complete_monalisa">
       <div class="eyes">
         <div class="eye">
-          <div class="ball">
+          <div class="ball" id="left-eye-ball">
             <img src="assets/Mona_eye.png" alt="eyeball" class="ball-img">
           </div>
         </div>
         <div class="eye">
-          <div class="ball">
+          <div class="ball" id="right-eye-ball">
             <img src="assets/Mona_eye.png" alt="eyeball" class="ball-img">
           </div>
         </div>
@@ -37,6 +37,28 @@
           balls[i].style.transform = "translate(-" + x + ", -" + y + ")";
         }
       }
+
+
+      // Get each ball by id and add a unique click action
+      var leftEyeBall = document.getElementById("left-eye-ball");
+      var rightEyeBall = document.getElementById("right-eye-ball");
+
+      let leftPercentage = 47.6;  // Example: 4.2% from the left
+      let topPercentage = 22.2;  // Example: 22.8% from the top
+
+      // Calculate the pixel values based on the viewport size
+      let leftPosition = window.innerWidth * (leftPercentage / 100);
+      let topPosition = window.innerHeight * (topPercentage / 100);
+
+      rightEyeBall.onclick = function() {
+        window.open('assets/davinciredr.jpg', '_blank',   `width=145,height=210,left=${leftPosition},top=${topPosition}`);
+        window.open(`davincidetails.html`, `davinci`, `width=691,height=30,left=550,top=850`); 
+
+      };
+
+
+      
     </script>
   </body>
 </html>
+

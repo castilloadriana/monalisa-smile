@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #517570; /* Red background */
+            font-family: 'Courier New', Courier, monospace; /* Terminal font */
+            color: #D3B15F; /* Light yellow text */
+        }
+
+        button {
+            font-size: 16px;
+            padding: 10px 20px;
+            background-color: #517570; /* Matching red background */
+            color: #D3B15F; /* Matching text color */
+            border: 2px solid #D3B15F; /* Light border */
+            font-family: 'Courier New', Courier, monospace; /* Terminal font */
+            cursor: pointer;
+            position: relative;
+        }
+
+        .cursor {
+            display: inline-block;
+            width: 10px;
+            background-color: rgb(235, 204, 163); /* Yellow cursor */
+            animation: blink 0.8s steps(1) infinite; /* Blinking cursor effect */
+            margin-left: 5px;
+            vertical-align: bottom;
+        }
+
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+
+        .dot {
+            display: inline-block;
+            animation: blinkDot 1s steps(1) infinite; /* Blinking dot effect */
+        }
+
+        @keyframes blinkDot {
+            50% { opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <button id="textButton" onclick="openMorePopups()"> </button>
+
+    <script>
+        const text = "How many whispers can shape a soul";
+        const button = document.getElementById("textButton");
+        let index = 0;
+
+        // Function to type the text letter by letter
+        function typeText() {
+            if (index < text.length) {
+                button.textContent += text[index];
+                index++;
+                setTimeout(typeText, 100); // Delay between letters (100ms)
+            } else {
+                // Add a blinking dot at the end of the text
+                button.innerHTML += '<span class="dot">?</span>';
+                // Add cursor after the dot
+                button.innerHTML += '<span class="cursor"></span>';
+            }
+        }
+
+        // Call the typing animation when the page loads
+        window.onload = typeText;
+
+        // Function to open the popup and close the window after a short delay
+        function openMorePopups() {
+            window.open(`transitions/1st.html`, `layers`, `width=336,height=323,left=678, top=104`);
+            setTimeout(() => {
+                window.close();
+            }, 500); // Adjust the delay if needed
+        }
+    </script>
+</body>
+</html>
