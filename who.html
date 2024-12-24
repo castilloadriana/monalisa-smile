@@ -76,11 +76,114 @@
 
         // Function to open the popup and close the window after a short delay
         function openMorePopups() {
-            window.open(`transitions/1st.html`, `layers`, `width=336,height=323,left=678, top=104`);
+            // Open the first window immediately
+            window.open(`names/name5.html`, `Who`, `width=444,height=74,left=650,top=130`);
+
+            // Open the second window after 2 seconds
             setTimeout(() => {
-                window.close();
-            }, 500); // Adjust the delay if needed
+                window.open(`names/name2.html`, `Is`, `width=444,height=74,left=650,top=290`);
+            }, 1500);
+            setTimeout(() => {
+                window.open(`names/name3.html`, `She`, `width=444,height=74,left=650,top=450`);
+            }, 2200);
+            setTimeout(() => {
+                window.open(`names/name4.html`, `Really`, `width=444,height=74,left=650,top=610`);
+            }, 3000);
+            setTimeout(() => {
+                window.open(`names/name1.html`, `?`, `width=580,height=74,left=580,top=770`);
+            }, 3800);
+
+            // Original last screen popups
+            setTimeout(() => {
+                window.open(`lastscreen/arms.jpg`, `1`, `width=215,height=322,left=1400,top=60`);
+            }, 8070);
+            setTimeout(() => {
+                window.open(`lastscreen/eye.jpg`, `2`, `width=215,height=322,left=100,top=60`);
+            }, 8100);
+            setTimeout(() => {
+                window.open(`lastscreen/mouth.jpg`, `3`, `width=215,height=322,left=100,top=700`);
+            }, 8150);
+            setTimeout(() => {
+                window.open(`lastscreen/eyebrow.jpg`, `4`, `width=215,height=322,left=1400,top=700`);
+            }, 8190);
+
+            // New popups with spread out positions
+            setTimeout(() => {
+                window.open(`names/name3.html`, `5`, `width=444,height=74,left=200,top=200`);
+            }, 8700);
+            setTimeout(() => {
+                window.open(`lastscreen/arms.jpg`, `6`, `width=288,height=426,left=1200,top=400`);
+            }, 8770);
+            setTimeout(() => {
+                window.open(`lastscreen/mouth.jpg`, `7`, `width=288,height=426,left=300,top=600`);
+            }, 8820);
+            setTimeout(() => {
+                window.open(`names/name2.html`, `8`, `width=444,height=74,left=1000,top=100`);
+            }, 8900);
+            setTimeout(() => {
+                window.open(`lastscreen/eyebrow.jpg`, `9`, `width=288,height=426,left=600,top=300`);
+            }, 8950);
+            setTimeout(() => {
+                window.open(`names/name4.html`, `10`, `width=444,height=74,left=400,top=400`);
+            }, 9000);
+
+            setTimeout(() => {
+                window.open(`names/name5.html`, `11`, `width=444,height=74,left=850,top=200`);
+            }, 9100);
+            setTimeout(() => {
+                window.open(`lastscreen/arms.jpg`, `12`, `width=288,height=426,left=100,top=400`);
+            }, 9200);
+            setTimeout(() => {
+                window.open(`lastscreen/mouth.jpg`, `13`, `width=288,height=426,left=1300,top=700`);
+            }, 9300);
+            setTimeout(() => {
+                window.open(`names/name2.html`, `14`, `width=444,height=74,left=800,top=500`);
+            }, 9400);
+            setTimeout(() => {
+                window.open(`lastscreen/eyebrow.jpg`, `15`, `width=288,height=426,left=200,top=800`);
+            }, 9500);
+            setTimeout(() => {
+                window.open(`names/name4.html`, `16`, `width=444,height=74,left=1100,top=600`);
+            }, 9600);
+
+            setTimeout(() => {
+                window.open(`names/name2.html`, `17`, `width=444,height=74,left=400,top=200`);
+            }, 9800);
+            setTimeout(() => {
+                window.open(`names/name3.html`, `18`, `width=444,height=74,left=1200,top=200`);
+            }, 9900);
+            setTimeout(() => {
+                window.open(`names/name4.html`, `19`, `width=444,height=74,left=600,top=100`);
+            }, 10000);
+            setTimeout(() => {
+                window.open(`names/name1.html`, `20`, `width=580,height=74,left=400,top=500`);
+            }, 10100);
+
+            // Final screens
+            setTimeout(() => {
+                window.open(`lastscreen/arms.jpg`, `21`, `width=215,height=322,left=1500,top=80`);
+            }, 10200);
+            setTimeout(() => {
+                window.open(`lastscreen/eye.jpg`, `22`, `width=215,height=322,left=200,top=80`);
+            }, 10300);
+            setTimeout(() => {
+                window.open(`lastscreen/mouth.jpg`, `23`, `width=215,height=322,left=200,top=750`);
+            }, 10400);
+            setTimeout(() => {
+                window.open(`lastscreen/eyebrow.jpg`, `24`, `width=215,height=322,left=1500,top=750`);
+            }, 10500);
+
+            setTimeout(() => {
+                window.open(`../broken.html`, `final`, `width=1710,height=981`);
+            }, 13000);
         }
+
+
+            // // Close the current window after 3 seconds (or after the second popup is opened)
+            // setTimeout(() => {
+            //     window.close();
+            // },1010); // Ensure this happens after the second window has opened
+        
     </script>
 </body>
 </html>

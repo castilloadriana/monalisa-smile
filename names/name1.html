@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #FFFF; /* Background color */
+            font-family: 'Courier New', Courier, monospace; /* Terminal font */
+            color: #251706; /* Light yellow text */
+        }
+
+        #textContainer {
+            font-size: 20px;
+        }
+
+        .cursor {
+            display: inline-block;
+            width: 10px;
+            background-color: rgb(235, 204, 163); /* Yellow cursor */
+            animation: blink 0.8s steps(1) infinite; /* Blinking cursor effect */
+            margin-left: 5px;
+            vertical-align: bottom;
+        }
+
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+
+        .dot {
+            display: inline-block;
+            animation: blinkDot 1s steps(1) infinite; /* Blinking dot effect */
+        }
+
+        @keyframes blinkDot {
+            50% { opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div id="textContainer"></div>
+
+    <script>
+        const text = "Lisa di Antonmaria Noldo Gherardini ";
+        const textContainer = document.getElementById("textContainer");
+        let index = 0;
+
+        // Function to type the text letter by letter
+        function typeText() {
+            if (index < text.length) {
+                textContainer.textContent += text[index];
+                index++;
+                setTimeout(typeText, 100); // Delay between letters (100ms)
+            } else {
+                // Add a blinking dot at the end of the text
+                textContainer.innerHTML += '<span class="dot">|</span>';
+                // Add cursor after the dot
+                textContainer.innerHTML += '<span class="cursor"></span>';
+            }
+        }
+
+        // Call the typing animation when the page loads
+        window.onload = typeText;
+    </script>
+</body>
+</html>
