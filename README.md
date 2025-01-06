@@ -1,5 +1,5 @@
 # A Smile for the Masses
-## TL;DR Exhibit Wellesley College Fall 2024
+## TL;DR Exhibition Wellesley College Fall 2024
 
 
 History, speculation, and technology have continually shaped our interpretations of the Mona Lisa. Through an interactive narrative, the work challenges perceptions of identity, mystery, and interpretation, inviting users to engage with the painting in new and unexpected ways. Ultimately, it asks: how does our obsession with the Mona Lisa alter the way we see it? Overanalysis risks distorting art’s essence—what defines greatness: the art itself, or what we project onto it?
