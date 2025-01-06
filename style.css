@@ -71,7 +71,7 @@
     }
 }
 
-@media screen and (width: 1710px) and (min-height: 880px) and (max-height: 920px) {
+@media screen and (min-width: 1700px) and (max-width: 1710px) and (min-height: 880px) and (max-height: 920px) {
     .eyes {
         top: 20.8%;
     }
@@ -81,8 +81,11 @@
 }
 
 
+/* 1709 x 896 */
+
+
 /* Adjust .eyes and .eye styles for 1710 x 903 resolution regular screen laptop*/
-@media screen and (width: 1710px) and (height: 981px) {
+@media screen and (min-width: 1700px) and (max-width: 1710px) and (height: 981px) {
     .eyes {
         top: 22.8%;
     }
