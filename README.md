@@ -1,4 +1,8 @@
 # A Smile for the Masses
+Instructions: 
+1. Click any elements and stay in the pop up opened, do not close it.
+2. The experience ends when you get to the broken/error page <3
+
 ## TL;DR Exhibition Wellesley College Fall 2024
 
 
